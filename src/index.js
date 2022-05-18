@@ -1,11 +1,9 @@
-const { Configuration, OpenAIApi } = require("openai");
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { Home } from './components';
+import { generatePrompt } from './api';
 
-const openai = new OpenAIApi(configuration);
-const response = await openai.createCompletion("text-curie-001", {
-    prompt: "Say this is a test",
-    temperature: 0,
-    max_tokens: 6,
-});
+createRoot(
+    document.getElementById('FunWithAIApp')
+)
+    .render(<Home />);

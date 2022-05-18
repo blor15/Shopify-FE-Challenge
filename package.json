@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run start:dev",
+    "start:dev": "parcel src/index.html -p 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.5.0",
+    "process": "^0.11.10"
+  },
   "dependencies": {
-    "openai": "^2.0.5"
+    "openai": "^2.0.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }
